@@ -19,5 +19,7 @@ jobs:
 
     - name: Docker
       shell: bash
-      run: docker --version
+      run: |
+        brew install docker
+        docker --version
 
