@@ -6,7 +6,7 @@ on:
 jobs:
   xcode-debug:
     name: OSX Debug
-    runs-on: macos-14
+    runs-on: macos-15
 
     env:
       TREAT_WARNINGS_AS_ERRORS: 1
@@ -20,15 +20,9 @@ jobs:
     - name: Docker
       shell: bash
       run: |
-        brew install docker wget colima
+        brew install docker
         docker --version
-        # wget --quiet https://desktop.docker.com/mac/main/arm64/Docker.dmg
-        # sudo hdiutil attach Docker.dmg
-        # sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
-        # sudo hdiutil detach /Volumes/Docker
-        # open -a Docker
-        # sleep 20
-        colima start -f -v --disk 10 --cpu 2 --memory 2 --runtime containerd
+        colima start
         docker ps
 
 
