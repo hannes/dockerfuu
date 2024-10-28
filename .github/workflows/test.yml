@@ -20,7 +20,7 @@ jobs:
     - name: Docker
       shell: bash
       run: |
-        brew install docker
+        brew install docker colima
         docker --version
         colima start
         docker ps
