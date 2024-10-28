@@ -28,7 +28,7 @@ jobs:
         # sudo hdiutil detach /Volumes/Docker
         # open -a Docker
         # sleep 20
-        colima start -f --disk 10 --vm-type=vz --cpu 2 --memory 2 --runtime containerd
+        colima start -f -v --disk 10 --cpu 2 --memory 2 --runtime containerd
         docker ps
 
 
