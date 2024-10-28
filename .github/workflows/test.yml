@@ -27,7 +27,7 @@ jobs:
         sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
         sudo hdiutil detach /Volumes/Docker
         open -a Docker
-        sleep 10
+        sleep 20
         docker ps
 
 
