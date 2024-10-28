@@ -30,4 +30,4 @@ jobs:
       if: always()
       shell: bash
       run: |
-        cat /Users/runner/.colima/_lima/colima/serial*.log
+        cat /Users/runner/.colima/_lima/colima/*.log
