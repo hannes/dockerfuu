@@ -28,8 +28,12 @@ jobs:
         # sudo hdiutil detach /Volumes/Docker
         # open -a Docker
         # sleep 20
-        colima start --vm-type=vz --cpu 2 --memory 4 --runtime containerd
+        colima start --disk 10 --vm-type=vz --cpu 2 --memory 2 --runtime containerd
         docker ps
 
 
-
+    - name: Print Logs
+      if: always()
+      shell: bash
+      run: |
+        cat /Users/runner/.colima/_lima/colima/serial*.log
