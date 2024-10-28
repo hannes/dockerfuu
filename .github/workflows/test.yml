@@ -6,7 +6,7 @@ on:
 jobs:
   xcode-debug:
     name: OSX Debug
-    runs-on: macos-14-xlarge
+    runs-on: macos-13-xlarge
 
     env:
       TREAT_WARNINGS_AS_ERRORS: 1
