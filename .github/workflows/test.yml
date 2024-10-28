@@ -1,0 +1,23 @@
+name: OSX
+on:
+  push:
+
+
+jobs:
+  xcode-debug:
+    name: OSX Debug
+    runs-on: macos-14
+
+    env:
+      TREAT_WARNINGS_AS_ERRORS: 1
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: ${{ inputs.git_ref }}
+
+    - name: Docker
+      shell: bash
+      run: docker --version
+
